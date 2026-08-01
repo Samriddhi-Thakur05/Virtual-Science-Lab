@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Virtual Science Lab</title>
+</head>
+
+<body>
+<!-- FIRST PAGE -->
+<nav class="navbar">
+    <!-- Logo -->
+    <div class="logo-section">
+        <img src="assets/Gemini_Generated_Image_sr4f5hsr4f5hsr4f.png" alt="logo" class="nav-logo">
+        <div class="logo-text">
+            <span class="small-text">VIRTUAL</span>
+            <h2>SCIENCE LAB</h2>
+        </div>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-label="Open menu">☰</button>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li class="dropdown">
+            <a href="#interactive-lab">
+                Experiments
+                <span class="arrow">⌄</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#interactive-lab" data-load-lab="physics">Physics Experiments</a></li>
+                <li><a href="#interactive-lab" data-load-lab="chemistry">Chemistry Experiments</a></li>
+                <li><a href="#interactive-lab" data-load-lab="biology">Biology Experiments</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#subjects">
+                Subjects
+                <span class="arrow">⌄</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#subjects">Physics</a></li>
+                <li><a href="#subjects">Chemistry</a></li>
+                <li><a href="#subjects">Biology</a></li>
+            </ul>
+        </li>
+        <li><a href="#ai-tutor">AI Tutor</a></li>
+        <li><a href="#features">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Authentication Buttons -->
+    <div class="auth-buttons">
+        <button class="login-btn" type="button">Login</button>
+        <button class="signup-btn" type="button">Sign Up</button>
+    </div>
+</nav>
+
+<section class="slide slide1" id="home">
+    <img src="assets/Gemini_Generated_Image_sr4f5hsr4f5hsr4f.png" alt="Virtual Science Lab" class="logo">
+
+    <video autoplay muted loop playsinline id="bgVideo">
+        <source src="assets/bubbling_chemicals__floating_m.mp4" type="video/mp4">
+    </video>
+
+    <div class="panel-overlay"></div>
+
+    <div class="content">
+        <h1>VIRTUAL SCIENCE LAB</h1>
+        <p>Interactive Experimental Learning Platform</p>
+        <div class="hero-buttons">
+            <a href="#features">
+                <button class="explore-btn" type="button">⚗ Start Exploring</button>
+            </a>
+            <button class="demo-btn" type="button">▶ Watch Demo</button>
+        </div>
+
+        <div class="scroll-indicator" onclick="scrollToNext()">↓</div>
+    </div>
+</section>
+
+<!-- SECOND PAGE -->
+<section id="next" class="slide slide2">
+    <div class="intro-copy reveal">
+        <h2>Why Virtual Science Lab?</h2>
+
+        <!-- <button onclick="apiCall()">Hello To Science</button>
+        <div id="demo" style="color:skyblue"></div>-->
+
+        <p>
+            Learn science safely through interactive experiments,
+            practical knowledge, and virtual simulations accessible anywhere.
+        </p>
+    </div>
+
+    <section id="features" class="horizontal-section">
+        <div class="horizontal-container">
+            <div class="panel safety">
+                <div class="overlay">
+                    <h1>SAFE EXPERIMENTS</h1>
+                    <p>
+                        Virtual Science Lab transforms the way students learn science by
+                        offering a secure, accessible, and immersive environment for
+                        Chemistry, Physics, and Biology experiments. Students can perform
+                        experiments safely, observe scientific phenomena in real time, and
+                        gain practical knowledge without the constraints of physical
+                        laboratories, making science education more engaging and accessible
+                        for everyone.
+                    </p>
+                </div>
+            </div>
+
+            <div class="panel interactive">
+                <div class="overlay">
+                    <h1>INTERACTIVE LEARNING</h1>
+                    <p>
+                        Engage with interactive simulations and perform
+                        Chemistry, Physics, and Biology experiments in a
+                        dynamic virtual environment. Manipulate variables,
+                        observe outcomes in real time, and develop a deeper
+                        understanding of scientific concepts through
+                        hands-on digital learning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="panel practical">
+                <div class="overlay">
+                    <h1>PRACTICAL KNOWLEDGE</h1>
+                    <p>
+                        Gain hands-on experience through realistic virtual
+                        experiments in Chemistry, Physics, and Biology.
+                        Understand laboratory procedures, analyze results,
+                        and strengthen practical skills by applying
+                        scientific concepts in an immersive digital
+                        environment.
+                    </p>
+                </div>
+            </div>
+
+            <div class="panel anywhere">
+                <div class="overlay">
+                    <h1>LEARN ANYWHERE</h1>
+                    <p>
+                        Virtual Science Lab makes science education
+                        accessible to everyone by enabling students to
+                        perform Chemistry, Physics, and Biology experiments
+                        anytime and anywhere. Whether using a computer,
+                        tablet, or smartphone, learners can explore
+                        scientific concepts, conduct virtual experiments,
+                        and enhance their understanding without the
+                        limitations of a traditional laboratory.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- THIRD PAGE -->
+<section class="slide slide3" id="subjects">
+    <div class="subject-header reveal">
+        <h2>Explore Virtual Laboratories</h2>
+        <p>
+            Choose a subject and start performing experiments
+            in an interactive environment.
+        </p>
+    </div>
+
+    <div class="subject-container">
+        <!-- Chemistry -->
+        <div class="subject-card chemistry-card reveal" data-load-lab="chemistry">
+            <div class="card-image">
+                <img src="assets/chemistry.png" alt="Chemistry">
+            </div>
+            <div class="card-content">
+                <h3>⚗ CHEMISTRY LAB</h3>
+                <ul>
+                    <li>Acid-Base Reactions</li>
+                    <li>Titration</li>
+                    <li>Electrolysis</li>
+                    <li>Flame Tests</li>
+                </ul>
+                <a href="#interactive-lab" class="lab-btn" data-load-lab="chemistry">Explore Lab →</a>
+            </div>
+        </div>
+
+        <!-- Physics -->
+        <div class="subject-card physics-card reveal" data-load-lab="physics">
+            <div class="card-image">
+                <img src="assets/physics.png" alt="Physics">
+            </div>
+            <div class="card-content">
+                <h3>⚙ PHYSICS LAB</h3>
+                <ul>
+                    <li>Newton's Laws</li>
+                    <li>Ohm's Law</li>
+                    <li>Projectile Motion</li>
+                    <li>Reflection of Light</li>
+                </ul>
+                <a href="#interactive-lab" class="lab-btn" data-load-lab="physics">Explore Lab →</a>
+            </div>
+        </div>
+
+        <!-- Biology -->
+        <div class="subject-card biology-card reveal" data-load-lab="biology">
+            <div class="card-image">
+                <img src="assets/biology.png" alt="Biology">
+            </div>
+            <div class="card-content">
+                <h3>🧬 BIOLOGY LAB</h3>
+                <ul>
+                    <li>Plant Cell Observation</li>
+                    <li>Human Anatomy</li>
+                    <li>Photosynthesis</li>
+                    <li>Genetics</li>
+                </ul>
+                <a href="#interactive-lab" class="lab-btn" data-load-lab="biology">Explore Lab →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="interactive-lab-section" id="interactive-lab">
+    <div class="lab-heading reveal">
+        <span>Live Experiment Area</span>
+        <h2 id="labTitle">Chemistry Lab: Acid-Base Indicator</h2>
+        <p id="labSummary">Drag the apparatus into the virtual table, follow each step, and observe the result.</p>
+    </div>
+
+    <div class="lab-tabs reveal" role="tablist" aria-label="Virtual lab subjects">
+        <button type="button" class="active" data-load-lab="chemistry">Chemistry</button>
+        <button type="button" data-load-lab="physics">Physics</button>
+        <button type="button" data-load-lab="biology">Biology</button>
+    </div>
+
+    <div class="lab-workspace">
+        <aside class="apparatus-panel reveal">
+            <h3>Apparatus</h3>
+            <p>Drag these items into the table.</p>
+            <div id="apparatusList" class="apparatus-list"></div>
+        </aside>
+
+        <div class="experiment-table reveal">
+            <div id="dropZone" class="drop-zone">
+                <p>Drop apparatus here</p>
+            </div>
+            <canvas id="experimentCanvas" width="720" height="410" aria-label="Virtual experiment simulation"></canvas>
+            <div class="lab-controls">
+                <button type="button" id="nextStepBtn">Next Step</button>
+                <button type="button" id="resetLabBtn">Reset</button>
+            </div>
+        </div>
+
+        <aside class="guide-panel reveal">
+            <h3>Step-by-step Guide</h3>
+            <ol id="stepList"></ol>
+
+            <h3>Live Observation</h3>
+            <div id="observationBox" class="observation-box">Load an experiment and begin.</div>
+
+            <h3>Concept</h3>
+            <p id="conceptBox"></p>
+        </aside>
+    </div>
+</section>
+
+<section class="quiz-section" id="quiz">
+    <div class="quiz-card reveal">
+        <span>Self Assessment</span>
+        <h2>Quick Science Quiz</h2>
+        <p id="quizQuestion"></p>
+        <div id="quizOptions" class="quiz-options"></div>
+        <div id="quizResult" class="quiz-result" aria-live="polite"></div>
+    </div>
+</section>
+
+<section class="ai-tutor-section" id="ai-tutor">
+    <div class="tutor-panel reveal">
+        <div>
+            <span>AI Tutor Preview</span>
+            <h2>Ask a science doubt</h2>
+            <p>Type a topic and get a guided learning hint instantly.</p>
+        </div>
+        <div class="tutor-chat">
+            <div id="chatMessages" class="chat-messages">
+                <p><strong>Tutor:</strong> Ask me about acids, circuits, plant cells, or safety.</p>
+            </div>
+            <form id="tutorForm">
+                <input id="tutorInput" type="text" placeholder="Example: What is Ohm's Law?">
+                <button type="submit">Ask</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="test-section">
+    <div>
+        <strong>TEST SECTION</strong>
+        <p>Original placeholder kept. The completed interactive lab is now above this section.</p>
+    </div>
+</section>
+
+<footer id="contact">
+    <h3>Virtual Science Lab</h3>
+    <p>Accessible, affordable, repeatable science practicals for every learner.</p>
+</footer>
+
+<div class="modal" id="authModal" aria-hidden="true">
+    <div class="modal-content">
+        <button class="modal-close" type="button" aria-label="Close">×</button>
+        <h2 id="modalTitle">Login</h2>
+        <input type="text" placeholder="Student name">
+        <input type="email" placeholder="Email address">
+        <button type="button" class="modal-action">Continue</button>
+    </div>
+</div>
+
+<div class="modal" id="demoModal" aria-hidden="true">
+    <div class="modal-content demo-content">
+        <button class="modal-close" type="button" aria-label="Close">×</button>
+        <h2>Platform Demo</h2>
+        <p>Choose a subject, drag apparatus into the virtual table, press Next Step, and answer the quiz to check your understanding.</p>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
